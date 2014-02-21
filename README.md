@@ -1,16 +1,16 @@
 # P3 Sinatra Authentication And Authorization
 
-##Learning Competencies
+## Learning Competencies
 
 * Implement user login and authentication.
 
-##Summary
+## Summary
 
 Using Sinatra, create a user signin/signup and authenticate signed in users before displaying information. Start from the skeleton in the `authentication` directory which contains a shell of database, views and controllers.
 
-##Releases
+## Releases
 
-###Release 0 : Implement Sign In
+### Release 0 : Implement Sign In
 
 Starting from the `sinatra_skeleton_mvc` your cohort has been using,  achieve the following functionality:
 
@@ -22,7 +22,7 @@ Starting from the `sinatra_skeleton_mvc` your cohort has been using,  achieve th
 6. A user can SignOut using the provided `delete` route which is from a hidden field in the form.
 7. A helper method `current_user`  returns the current signed in user and is used to display appropriate SignIn / SignOut portions of the view.  (This logic is already implemented in the view - you just need to finish the helper method).
 
-###Release 1: Validation (optional)
+### Release 1: Validation (optional)
 Demonstrate model validation, error messages, and user access levels.
 
 * Add validation to the user model including password length and appropriately formated email.
@@ -32,4 +32,4 @@ Add a field to store user access level (Admin / Student) and limit functionality
 
 <!-- ##Optimize Your Learning  -->
 
-##Resources
+## Resources
