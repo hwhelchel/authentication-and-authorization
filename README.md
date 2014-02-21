@@ -38,7 +38,7 @@ Demonstrate model validation, error messages, and user access levels.
   formated email.
 * Display appropriate error messages to the user for invalid data.
 * Add a field to store user access level (Admin / Student) and limit
-  functionality to different users leves. (ie an Admin can edit users but a
+  functionality to different users leves. (i.e. an Admin can edit users but a
   Student can only see other users).
 
 
