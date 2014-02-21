@@ -12,7 +12,7 @@ Using Sinatra, create a user signin/signup and authenticate signed in users befo
 
 ###Release 0 : Implement Sign In
 
-Modify the skeleton code to achieve the following functionality:
+Starting from the `sinatra_skeleton_mvc` your cohort has been using,  achieve the following functionality:
 
 1. A user can SignUp for a new account with an email and password.  
 2. User passwords are stored encrypted in the password-hash field.  You may implement this yourself or use the `bcyrpt` gem.
