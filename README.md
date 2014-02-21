@@ -19,7 +19,7 @@ the following functionality:
 
 1. A user can SignUp for a new account with an email and password.
 2. User passwords are stored encrypted in the password-hash field.  You may
-   implement this yourself or use the `bcyrpt` gem.  3. An existing user can
+   implement this yourself or use the `bcrypt` gem.  3. An existing user can
    SignIn
 4. If a user is not signed in, they only see a welcome message on the home page.
 5. If a user is signed in, they can see all users on the home page.
