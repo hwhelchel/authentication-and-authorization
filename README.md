@@ -7,8 +7,7 @@
 ## Summary
 
 Using Sinatra, create a user signin/signup and authenticate signed in users
-before displaying information. Start from the skeleton in the `authentication`
-directory which contains a shell of database, views and controllers.
+before displaying information.
 
 ## Releases
 
@@ -23,12 +22,9 @@ the following functionality:
 3. An existing user can SignIn
 4. If a user is not signed in, they only see a welcome message on the home page.
 5. If a user is signed in, they can see all users on the home page.
-6. A user can SignOut using the provided `delete` route which is from a hidden
-   field in the form.
-7. A helper method `current_user`  returns the current signed in user and is
-   used to display appropriate SignIn / SignOut portions of the view.  (This logic
-   is already implemented in the view - you just need to finish the helper
-   method).
+6. A user can SignOut using a `delete` route
+7. A helper method `current_user`  returns the current signed-in user and is
+   used to display appropriate SignIn / SignOut portions of the view.
 
 ### Release 1: Validation (optional)
 
