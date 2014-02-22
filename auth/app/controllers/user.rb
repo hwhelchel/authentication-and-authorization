@@ -8,7 +8,8 @@ end
 
 post '/users' do
   unless loggedin?
-    User.create(params[:user])
+    p params
+    User.create_encrypt(params)
     redirect '/'
   else
     redirect back
@@ -41,3 +42,5 @@ get '/users' do
     redirect back
   end
 end
+
+
