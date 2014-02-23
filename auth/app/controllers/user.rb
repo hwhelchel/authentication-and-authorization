@@ -8,11 +8,7 @@ end
 
 post '/users' do
   unless loggedin?
-    p params
-    binding.pry
-    @user = User.new(params[:user])
-    @user.password = params[:password]
-    @user.save!
+    User.create(params)
     redirect '/'
   else
     redirect back
@@ -21,7 +17,6 @@ end
 
 post '/users/login' do
   unless loggedin?
-    @user = User.find_by_email(params[:email])
     login
   else
     redirect back
@@ -30,7 +25,7 @@ end
 
 delete '/users/logout' do
   if loggedin?
-    session.clear
+    logout
     redirect '/'
   else
     redirect back

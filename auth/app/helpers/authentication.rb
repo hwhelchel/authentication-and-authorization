@@ -15,4 +15,8 @@ helpers do
     session[:id] = @user.id
   end
 
+  def logout
+    session.clear
+  end
+
 end
