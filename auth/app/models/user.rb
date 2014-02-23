@@ -19,7 +19,6 @@ class User < ActiveRecord::Base
   end
 
   def self.create(params)
-    binding.pry
     @user = User.new(email: params[:email], pass: params[:password])
     @user.hash_password(params[:password])
     @user.save!
