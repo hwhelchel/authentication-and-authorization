@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe User do
 
-  before(:all) do
+  before(:each) do
     @user = FactoryGirl.build(:user)
   end
 
@@ -11,20 +11,10 @@ describe User do
     it { should allow_value('test5@example.com').for(:email) }
     it { should_not allow_value('fdsjla').for(:email) }
     it { should validate_uniqueness_of(:email) }
-    # it { should_not allow_value(nil).for(:password) }
-    # it { should_not allow_value("").for(:password) }
+    it { should validate_presence_of(:password_hash) }
   end
 
   context 'when logging in' do
-
-    it 'checks email against stored email' do
-      pending 'may get to'
-    end
-
-    it 'checks password against hashed password' do
-      pending 'may get to'
-    end
-
     it 'sets a session cookie' do
       @user.save
       params = {
