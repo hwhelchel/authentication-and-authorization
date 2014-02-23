@@ -9,7 +9,10 @@ end
 post '/users' do
   unless loggedin?
     p params
-    User.create_encrypt(params)
+    binding.pry
+    @user = User.new(params[:user])
+    @user.password = params[:password]
+    @user.save!
     redirect '/'
   else
     redirect back

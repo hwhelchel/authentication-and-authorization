@@ -3,7 +3,6 @@ helpers do
     @user = User.find_by_email(params[:email])
     if @user && @user.password == params[:password]
       give_token
-      session[:id] = @user.id
     end
       redirect '/'
   end
@@ -12,11 +11,8 @@ helpers do
     !!session[:id]
   end
 
-  def create
-    @user = User.new(params[:user])
-    @user.password = params[:new_password]
-    @user.save!
+  def give_token
+    session[:id] = @user.id
   end
-
 
 end

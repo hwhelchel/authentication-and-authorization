@@ -6,19 +6,12 @@ class User < ActiveRecord::Base
   include BCrypt
 
   def password
-    @password ||= Password.new(hash_password)
+    @password ||= Password.new(password_hash)
   end
 
   def password=(new_password)
     @password = Password.create(new_password)
-    self.hash_password = @password
+    self.password_hash = @password
   end
-
-  def create_encrypt(params)
-    @user = User.new(params[:user])
-    @user.password = params[:new_password]
-    @user.save!
-  end
-
   
 end
