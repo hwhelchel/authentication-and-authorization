@@ -12,6 +12,7 @@ describe User do
     it { should_not allow_value('fdsjla').for(:email) }
     it { should validate_uniqueness_of(:email) }
     it { should validate_presence_of(:password_hash) }
+    it { should ensure_length_of(:pass).is_at_least(4) }
   end
 
   context 'when logging in' do

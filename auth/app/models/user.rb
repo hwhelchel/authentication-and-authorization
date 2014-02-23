@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
 
   EMAIL_REGEX = /\A[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\z/i
-
+  attr_accessor :pass
+  validates_length_of :pass, minimum: 4, on: :create
   validates_presence_of :email, :password_hash, on: :create
   validates_uniqueness_of :email, allow_blank: false
   validates_format_of :email, with: EMAIL_REGEX, on: :create
@@ -18,7 +19,8 @@ class User < ActiveRecord::Base
   end
 
   def self.create(params)
-    @user = User.new(params[:user])
+    binding.pry
+    @user = User.new(email: params[:email], pass: params[:password])
     @user.hash_password(params[:password])
     @user.save!
   end
